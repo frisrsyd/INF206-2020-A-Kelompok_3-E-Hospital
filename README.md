@@ -18,8 +18,10 @@ composer install
 php artisan serve
 ```
 
+## Contact info
+
 if any problem contact whatsapp
 
 ```bash
-085261297134
+https://api.whatsapp.com/send?phone=6285261297134
 ```
