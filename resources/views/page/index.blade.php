@@ -7,8 +7,9 @@
             <form>
                 <div class="form-control">
                     <input name="search" type="text" class="searchBox" placeholder="Search....">
-                    <a href="#" class="searchIcon">
-                        <img src="img/search.png" alt="">
+                    <a href="#" class="searchIcon ms-5">
+                        {{-- <img src="img/search.png" alt=""> --}}
+                        <i class="bi bi-search" style="color: #333333"></i>
                     </a>
                 </div>
             </form>

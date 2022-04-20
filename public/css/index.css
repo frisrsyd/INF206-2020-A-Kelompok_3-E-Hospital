@@ -7,12 +7,16 @@ body{
 .searchBox{
     border: transparent;
     background-color: transparent;
+    height: 3em;
 }
 .searchIcon img{
-    width: 20%;
+    width: 30%;
     margin-left: 10px;
     margin-right: 10px;
 }
+/* .searchIcon{
+    position: relative;
+} */
 .search-container .row {
     align-items: center;
     justify-content: left;
@@ -110,6 +114,7 @@ a {
     border: none;
     color: #B6B6B6;
     font-weight: lighter;
+    width: 20em;
 }
 .keterangan{
     color: #333333;
