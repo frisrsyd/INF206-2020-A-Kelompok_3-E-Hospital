@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -36,7 +36,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -48,7 +48,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -60,7 +60,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -72,7 +72,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -85,7 +85,7 @@
             </a>
         </div>
         <div class="w-100 d-none d-md-block"></div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -97,7 +97,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -109,7 +109,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -121,7 +121,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
@@ -133,7 +133,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-1 card card-post shadow">
+        <div class="col-md-1 card card-post shadow me-2">
             <a href="#">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
