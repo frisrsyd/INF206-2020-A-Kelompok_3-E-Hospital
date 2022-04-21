@@ -20,7 +20,8 @@ body{
 .search-container .row {
     align-items: center;
     justify-content: left;
-    height: 50vh;
+    height: 30vh;
+    margin-top: 2em;
 }
 
 /* tool container */
