@@ -23,6 +23,13 @@ body{
     height: 50vh;
 }
 
+/* tool container */
+.tool-container{
+    align-items: center;
+    justify-content: left;
+    margin-top: 20vh;
+}
+
 
 /* card post */
 .card-post {

@@ -11,4 +11,9 @@ class PageController extends Controller
     {
         return view('page.index');
     }
+
+    public function allTools()
+    {
+        return view('page.all-tools');
+    }
 }
