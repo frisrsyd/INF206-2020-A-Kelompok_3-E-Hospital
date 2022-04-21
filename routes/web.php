@@ -5,3 +5,4 @@ use App\Http\Controllers\PageController;
 
 
 Route::get('/', [PageController::class, 'index']);
+Route::get('all-tools', [PageController::class, 'allTools']);
