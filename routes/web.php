@@ -6,7 +6,7 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/', [LoginController::class, 'login']);
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 
 Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
