@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-3 text-center ">
             <form>
-                <div class="form-control">
+                <div class="search-control">
                     <input name="search" type="text" class="searchBox" placeholder="Search....">
                     <a href="#" class="searchIcon ms-5">
                         {{-- <img src="img/search.png" alt=""> --}}
@@ -26,116 +26,7 @@
     </div>
     <div class="row">
         <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="w-100 d-none d-md-block"></div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
-                <img src="img/Stethoscope.png" class="card-img-top">
-                <div class="card-body">
-                    <p class="mb-2 profile">
-                    <div class="row text-center">
-                        <small class="card-text post-caption" style="font-size: 12px">Stetoskop</small>
-                    </div>
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-1 card card-post shadow me-2">
-            <a href="#">
+            <a href="{{ url('#') }}">
                 <img src="img/Stethoscope.png" class="card-img-top">
                 <div class="card-body">
                     <p class="mb-2 profile">

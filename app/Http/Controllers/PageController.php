@@ -16,4 +16,9 @@ class PageController extends Controller
     {
         return view('page.all-tools');
     }
+
+    public function rekapPinjam()
+    {
+        return view('page.rekap-pinjam');
+    }
 }
