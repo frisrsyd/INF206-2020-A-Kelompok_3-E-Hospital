@@ -21,4 +21,14 @@ class PageController extends Controller
     {
         return view('page.rekap-pinjam');
     }
+
+    public function inputData()
+    {
+        return view('page.input-data');
+    }
+
+    public function account()
+    {
+        return view('page.account');
+    }
 }

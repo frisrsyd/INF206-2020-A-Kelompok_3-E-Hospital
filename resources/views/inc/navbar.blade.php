@@ -12,7 +12,7 @@
                 <a class="btn btn-grey" href="{{url('#')}}"><img src="img/Notifications.png" alt=""> Notifications</a>
                 <a class="btn bg-gradient-primary" href="{{url('#')}}"><i class="bi bi-clock-history"></i> History</a>
                 <a href="{{url('#')}}" class="btn" style="color: black"><img src="img/on-loan.png" alt=""> On Loan</a>
-                <a href="#" class="btn" style="color: black"><img src="img/account.png" height="33" alt=""></a>
+                <a href="{{ 'account' }}" class="btn" style="color: black"><img src="img/account.png" height="33" alt=""></a>
                 
             </div>
         </div>
