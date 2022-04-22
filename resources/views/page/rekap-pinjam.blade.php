@@ -10,6 +10,13 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col col-md-6 text-center card card-post shadow">
+                <img src="img/Stethoscope.png" class="card-img-top" alt="Photo Here">
+            </div>
+        </div>
+        <div class="row">
             <div class="col col-md-6 text-center">
                 <form><div class="row">
                     <div class=" mb-3 form-jumlah shadow col">
@@ -30,11 +37,12 @@
                     <div class="mb-3 row">
                         <input name="tgl_mulai" type="date" class="form-control me-2 text-center shadow" placeholder="Tanggal Mulai">
                         <input name="tgl_akhir" type="date" class="form-control text-center shadow" placeholder="Tanggal Akhir">
+                        <small class="col text-left mt-3"><strong>*Note: Max 14 hari</strong></small>
                     </div>
                     <button class="btn  w-50 mb-4 btnSignIn shadow">Chekckout>></button>
                 </form>
             </div>
-            <small class="col text-left mt-3"><strong>*Note: Max 14 hari</strong></small>
         </div>
+        
     </div>
 @endsection
