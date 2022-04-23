@@ -9,10 +9,23 @@ body{
     background-color: transparent;
     height: 3em;
 }
+.search-control{
+    background-color: #FFEFD9;
+    height: 3em;
+    width: 20em;
+    border-radius: 100px;
+    border: none;
+    color: #333333;
+    font-weight: lighter;
+    /* width: 20em; */
+}
 .searchIcon img{
     width: 30%;
     margin-left: 10px;
     margin-right: 10px;
+}
+.searchIcon :hover{
+    cursor: pointer;
 }
 /* .searchIcon{
     position: relative;
@@ -20,7 +33,15 @@ body{
 .search-container .row {
     align-items: center;
     justify-content: left;
-    height: 50vh;
+    height: 30vh;
+    margin-top: 2em;
+}
+
+/* tool container */
+.tool-container{
+    align-items: center;
+    justify-content: left;
+    margin-top: 20vh;
 }
 
 
@@ -95,7 +116,7 @@ a {
 }
 .btnSignIn{
     color : #444444;
-    background-color: #FF7E36;
+    background-color: #B4FF39;
     height: 3em;
     width: 20em;
     border-radius: 100px;
@@ -109,13 +130,93 @@ a {
     font-weight: bold;
 }
 .form-control{
-    background-color: #FFEFD9;
+    background-color: #FFC839;
+    height: 3em;
+    width: 20em;
     border-radius: 100px;
     border: none;
-    color: #B6B6B6;
+    color: #333333;
     font-weight: lighter;
+    /* width: 20em; */
+}
+.form-login{
+    background-color: #FFE192;
+    height: 3em;
     width: 20em;
+    border-radius: 100px;
+    border: none;
+    color: #333333;
+    font-weight: lighter;
+    /* width: 20em; */
 }
 .keterangan{
     color: #333333;
+}
+
+.form-jumlah{
+    background-color: #FFC839;
+    height: 3em;
+    width: 40.5em;
+    border-radius: 100px;
+    border: none;
+    color: #333333;
+    font-weight: lighter;
+}
+
+.jmlhhBox{
+    border: transparent;
+    background-color: transparent;
+    height: 3em;
+    width: 2em;
+}
+.jmlhBox{
+    border: transparent;
+    background-color: transparent;
+    height: 2.5em;
+    width: 2em;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+}
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+/* Banner */
+.banner {
+    margin-top: 230px;
+}
+.banner .name {
+    color: white;
+}
+
+.banner .cover-image,
+.banner .profile-image {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+
+.banner .profile-image {
+    width: 225px;
+    height: 225px;
+    background-image: url(../img/avatar.png);
+    border-radius: 50%;
+    border: 8px solid white;
+    margin: -115px auto 0 auto;
+}
+.account-management{
+    background-color: transparent;
+    border: none;
+}
+.account-container{
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
 }
