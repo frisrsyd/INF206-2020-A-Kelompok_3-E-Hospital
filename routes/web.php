@@ -11,4 +11,4 @@ Route::get('input-data', [PageController::class, 'inputData']);
 Route::get('account', [PageController::class, 'account']);
 Route::get('signUp', [PageController::class, 'signUp']);
 Route::get('login', [PageController::class, 'login']);
-Route::get('login-admin', [PageController::class, 'loginadmin']);
+Route::get('login-admin', [PageController::class, 'loginAdmin']);
