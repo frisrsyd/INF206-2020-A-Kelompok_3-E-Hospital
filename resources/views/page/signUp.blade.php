@@ -29,9 +29,6 @@
                                                             <div class="mx-5 mb-3">
                                                                 <input name="password" type="password" class="form-control" placeholder="Masukkan Password">
                                                             </div>
-                                                            <div class="mx-5 mb-3">
-                                                                <input name="gambar" type="file" class="form-control" placeholder="Masukkan Gambar">
-                                                            </div>
                                                             <button class="btn btnSignIn mb-md-4 shadow" type="submit">Sign Up</button>
                                                             <div><a href="{{ '#' }}" class="btn" style="color: blue">Login Here</a></div>
                                                         </form>
