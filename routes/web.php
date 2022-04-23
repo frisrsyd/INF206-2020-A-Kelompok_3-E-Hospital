@@ -9,3 +9,4 @@ Route::get('all-tools', [PageController::class, 'allTools']);
 Route::get('rekap-pinjam', [PageController::class, 'rekapPinjam']);
 Route::get('input-data', [PageController::class, 'inputData']);
 Route::get('account', [PageController::class, 'account']);
+Route::get('signUp', [PageController::class, 'signUp']);
