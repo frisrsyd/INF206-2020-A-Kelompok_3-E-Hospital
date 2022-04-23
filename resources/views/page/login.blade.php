@@ -1,38 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login - E-Hospital</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container"><br>
-        <div class="col-md-4 col-md-offset-4">
-            <img src="img/logo.png" height="90" class="d-inline-block align-text-top">
-            <hr>
-            @if(session('error'))
-            <div class="alert alert-danger">
-                <b>Opps!</b> {{session('error')}}
-            </div>
-            @endif
-            <form action="{{ route('actionlogin') }}" method="post">
-            @csrf
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Log In</button>
-                <hr>
-                <p class="text-center">Belum punya akun? <a href="#">Register</a> sekarang!</p>
-                <p class="text-center">Lupa password? klik <a href="#">disini</a> </p>
-            </form>
-        </div>
+@extends('app')
+
+@section('content')
+
+<meta charset="utf-8">
+<style type="text/css">
+    .login {
+        margin: 50px auto;
+        width: 400px;
+        padding: 10px;
+    }
+    input[type=email]{
+        margin: 15px auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+    input[type=password] {
+        margin: 15px auto;
+        width: 100%;
+        padding: 10px;
+    }
+
+</style>
+    <div class="container mt-5 pt-5">
+            <div class="mb-3">
+                    @csrf
+                    <img src="img/logo.png" height="50" style="display:block; margin:auto;">
+                    </div>
+<div class="login">
+    @if(session('error'))
+    <div class="alert alert-danger">
+   <b>Opps!</b> {{session('error')}}
     </div>
-</body>
-</html>
+
+   @endif
+   <form method="post">
+   @csrf
+
+   <div class="form-group">                   
+   <input type="email" name="email" class="form-control" placeholder="Email" required="">
+</div>
+
+<div class="form-group">
+    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+</div>
+
+<p> </p>
+<button type="submit" class="btn btn-primary btn-block">Log In</button>
+<hr>
+<p class="text-center" style="color: black">Belum punya akun? <a href="#" style="color: blue">Register</a> sekarang!</p>
+<p class="text-center" style="color: black">Lupa password? klik <a href="#" style="color: blue">disini</a> </p>
+</form>
+</div>
+</div>
+
+
+
+@endsection

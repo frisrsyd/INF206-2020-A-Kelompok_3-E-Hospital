@@ -31,4 +31,14 @@ class PageController extends Controller
     {
         return view('page.account');
     }
+    public function signUp()
+    {
+        return view('page.signUp');
+    }
+
+    public function login()
+    {
+        return view('page.login');
+    }
+
 }
