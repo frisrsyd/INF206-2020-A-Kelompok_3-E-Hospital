@@ -41,4 +41,9 @@ class PageController extends Controller
         return view('page.login');
     }
 
+    public function loginadmin()
+    {
+        return view('page.login-admin');
+    }
+
 }
