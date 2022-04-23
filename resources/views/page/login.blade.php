@@ -10,7 +10,7 @@
 <body>
     <div class="container"><br>
         <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center"><b>E-Hospital</b><br>Search for Portable Tool</h3>
+            <img src="img/logo.png" height="90" class="d-inline-block align-text-top">
             <hr>
             @if(session('error'))
             <div class="alert alert-danger">
@@ -30,6 +30,7 @@
                 <button type="submit" class="btn btn-primary btn-block">Log In</button>
                 <hr>
                 <p class="text-center">Belum punya akun? <a href="#">Register</a> sekarang!</p>
+                <p class="text-center">Lupa password? klik <a href="#">disini</a> </p>
             </form>
         </div>
     </div>
