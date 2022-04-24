@@ -60,4 +60,9 @@ class PageController extends Controller
         return view('page.inputUlangPassword');
     }
 
+    public function ketersediaanTool()
+    {
+        return view('page.ketersediaan');
+    }
+
 }
