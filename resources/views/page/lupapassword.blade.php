@@ -8,19 +8,21 @@
                     <div class="card account-management">
                         <div class="card-body">
                             <table class="table table-bordered">
-                                <div class="container mt-3 pt-5">
+                                <div class="container mt-3 ">
                                     <div class="col">
-                                        <form enctype="multipart/form-data" >
+                                        <form enctype="multipart/form-data">
                                             @csrf
                                             <div class="mx-5 mb-3 form-control shadow col send-control">
-                                                <input name="email" type="text" class= "sendBox" placeholder="Masukkan Email">
+                                                <input name="email" type="text" class="sendBox"
+                                                    placeholder="Masukkan Email">
                                                 <button class="btn " type="submit">Kirim Code</button>
                                             </div>
                                             <div class="mx-5 mb-3">
-                                                <input name="password" type="password" class="form-control send-control" placeholder="Masukkan Code Verifikasi">
+                                                <input name="password" type="password" class="form-control send-control"
+                                                    placeholder="Masukkan Code Verifikasi">
                                             </div>
                                             <div class="text-center me-4">
-                                                <a href="{{url('inputUlangPassword')}}">
+                                                <a href="{{ url('inputUlangPassword') }}">
                                                     <button class="btn btnSignIn mb-md-4 shadow" type="submit">Next</button>
                                                 </a>
                                             </div>

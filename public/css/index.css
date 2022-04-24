@@ -226,3 +226,23 @@ input[type="number"] {
     background-color: transparent;
     /* margin-top: 0.3em */
 }
+
+.form-ketersediaan{
+    background-color: #FFC839;
+    height: 8em;
+    /* width: 40.5em; */
+    border-radius: 100px;
+    border: none;
+    color: #333333;
+    font-weight: lighter;
+}
+/* .send-control{
+    background-color: #FFC839;
+    height: 3em;
+    /* width: 40.5em; */
+    border-radius: 100px;
+    border: none;
+    color: #333333;
+    font-weight: lighter;
+} */
+
