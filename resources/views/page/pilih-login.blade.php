@@ -44,11 +44,13 @@
 </div>
 
 <div class="pagePilih">
-                   
-    <button type="admin" class="btn btn-primary btn-block">Login as admin</button>
+    <a href="{{url('login-admin')}}">
+        <button type="admin" class="btn btnSignIn btn-block">Login as admin</button>
+    </a>           
 
-    <button type="user" class="btn btn-primary btn-block">Login as user</button>
-    
+    <a href="{{url('login')}}">
+        <button type="user" class="btn btnSignIn btn-block">Login as user</button>
+    </a>
 </div>
 
 
