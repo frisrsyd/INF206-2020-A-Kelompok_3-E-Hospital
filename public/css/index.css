@@ -220,3 +220,9 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
 }
+
+.sendBox{
+    border: transparent;
+    background-color: transparent;
+    /* margin-top: 0.3em */
+}

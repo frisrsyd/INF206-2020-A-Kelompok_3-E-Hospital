@@ -8,30 +8,25 @@
                     <div class="card account-management">
                         <div class="card-body">
                             <table class="table table-bordered">
-                                <tbody class="table-body">
-                                    <tr>
-                                        <td>
-                                            <div class="container mt-3 pt-5">
-                                                <div class="row search-container">
-                                                    <div class="col text-center">
-                                                        <form enctype="multipart/form-data" method="POST" action="">
-                                                            @csrf
-                                                            
-                                                            <div class="mx-5 mb-3">
-                                                                <input name="email" type="text" class="form-control" placeholder="Masukkan Email">
-                                                            </div>
-                                                            <button class="btn btnSignIn mb-md-4 shadow" type="submit">Kirim Code</button>
-                                                            <div class="mx-5 mb-3">
-                                                                <input name="password" type="password" class="form-control" placeholder="Masukkan Code Verifikasi">
-                                                            </div>
-                                                            <button class="btn btnSignIn mb-md-4 shadow" type="submit">Next</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                        </td>
-                                    </tr>
-                                </tbody>
+                                <div class="container mt-3 pt-5">
+                                    <div class="col">
+                                        <form enctype="multipart/form-data" >
+                                            @csrf
+                                            <div class="mx-5 mb-3 form-control shadow col send-control">
+                                                <input name="email" type="text" class= "sendBox" placeholder="Masukkan Email">
+                                                <button class="btn " type="submit">Kirim Code</button>
+                                            </div>
+                                            <div class="mx-5 mb-3">
+                                                <input name="password" type="password" class="form-control send-control" placeholder="Masukkan Code Verifikasi">
+                                            </div>
+                                            <div class="text-center me-4">
+                                                <a href="{{url('inputUlangPassword')}}">
+                                                    <button class="btn btnSignIn mb-md-4 shadow" type="submit">Next</button>
+                                                </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </table>
                         </div>
                     </div>

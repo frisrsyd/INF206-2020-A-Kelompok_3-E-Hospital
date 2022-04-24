@@ -50,4 +50,14 @@ class PageController extends Controller
         return view('page.login-admin');
     }
 
+    public function lupapassword()
+    {
+        return view('page.lupapassword');
+    }
+
+    public function inputUlangPassword()
+    {
+        return view('page.inputUlangPassword');
+    }
+
 }
