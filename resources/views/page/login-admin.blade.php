@@ -2,6 +2,7 @@
 
 @section('content')
 
+<meta charset="utf-8">
 <style type="text/css">
     .login {
         margin: 50px auto;
@@ -26,6 +27,8 @@
                     @csrf
                     <img src="img/logo.png" height="50" style="display:block; margin:auto;">
                     </div>
+
+                    <center><p style="color: black">Admin login </p></center>
 <div class="login">
     @if(session('error'))
     <div class="alert alert-danger">
@@ -47,7 +50,6 @@
 <p> </p>
 <center><button type="submit" class="btn btnSignIn btn-block">Log In</button></center>
 <hr>
-<p class="text-center" style="color: black">Belum punya akun? <a href="#" style="color: blue">Register</a> sekarang!</p>
 <p class="text-center" style="color: black">Lupa password? klik <a href="#" style="color: blue">disini</a> </p>
 </form>
 </div>
