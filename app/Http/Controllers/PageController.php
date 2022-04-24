@@ -12,39 +12,11 @@ class PageController extends Controller
         return view('page.index');
     }
 
-    public function allTools()
-    {
-        return view('page.all-tools');
-    }
-
-    public function rekapPinjam()
-    {
-        return view('page.rekap-pinjam');
-    }
-
-    public function inputData()
-    {
-        return view('page.input-data');
-    }
-
     public function account()
     {
-        return view('page.account');
+        return view('page.pilih-login');
     }
-    public function signUp()
-    {
-        return view('page.signUp');
-    }
-
-    public function login()
-    {
-        return view('page.login');
-    }
-
-    public function loginAdmin()
-    {
-        return view('page.login-admin');
-    }
+    
     
 
 }

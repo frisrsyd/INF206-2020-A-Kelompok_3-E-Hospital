@@ -48,7 +48,7 @@
 </div>
 
 <p> </p>
-<button type="submit" class="btn btn-primary btn-block">Log In</button>
+<center><button type="submit" class="btn btn-primary btn-block">Log In</button></center>
 <hr>
 <p class="text-center" style="color: black">Lupa password? klik <a href="#" style="color: blue">disini</a> </p>
 </form>
