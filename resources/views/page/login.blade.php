@@ -2,7 +2,6 @@
 
 @section('content')
 
-<meta charset="utf-8">
 <style type="text/css">
     .login {
         margin: 50px auto;
