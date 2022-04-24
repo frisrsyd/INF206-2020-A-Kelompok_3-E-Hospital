@@ -21,6 +21,19 @@
         padding: 10px;
     }
 
+    .loader-wrapper {
+        widht :60px;
+        height :60px;
+    }
+
+    .loader {
+        box-sizing :border-box;
+        width :100%
+        height :100%
+        border :10px solid #162534;
+        border-top-color : #4B7BE5
+    }
+
 </style>
 
 <div class="container mt-5 pt-5">

@@ -17,6 +17,5 @@ class PageController extends Controller
         return view('page.pilih-login');
     }
     
-    
 
 }
