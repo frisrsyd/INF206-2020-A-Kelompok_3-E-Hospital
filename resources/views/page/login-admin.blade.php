@@ -50,7 +50,7 @@
 <p> </p>
 <center><button type="submit" class="btn btnSignIn btn-block">Log In</button></center>
 <hr>
-<p class="text-center" style="color: black">Lupa password? klik <a href="#" style="color: blue">disini</a> </p>
+<p class="text-center" style="color: black">Lupa password? klik <a href="{{url('lupapassword')}}" style="color: blue">disini</a> </p>
 </form>
 </div>
 </div>
