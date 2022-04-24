@@ -30,7 +30,7 @@
                                                                 <input name="password" type="password" class="form-control" placeholder="Masukkan Password">
                                                             </div>
                                                             <button class="btn btnSignIn mb-md-4 shadow" type="submit">Sign Up</button>
-                                                            <div><a href="{{ '#' }}" class="btn" style="color: blue">Login Here</a></div>
+                                                            <div><a href="{{ 'pilih-login' }}" class="btn" style="color: blue">Login Here</a></div>
                                                         </form>
                                                     </div>
                                                 </div>
