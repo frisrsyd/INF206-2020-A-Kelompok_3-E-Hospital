@@ -15,7 +15,7 @@
                                 <tbody class="table-body">
                                     <tr>
                                         <td>
-                                            <a href="{{url('login')}}">Login</a> 
+                                            <a href="{{url('pilih-login')}}">Login</a> 
                                         </td>
                                     </tr>
                                     <tr>

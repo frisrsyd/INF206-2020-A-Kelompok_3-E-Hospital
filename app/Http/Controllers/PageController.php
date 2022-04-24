@@ -36,9 +36,18 @@ class PageController extends Controller
         return view('page.signUp');
     }
 
+    public function pilihLogin()
+    {
+        return view('page.pilih-login');
+    }
     public function login()
     {
         return view('page.login');
+    }
+
+    public function loginAdmin()
+    {
+        return view('page.login-admin');
     }
 
 }

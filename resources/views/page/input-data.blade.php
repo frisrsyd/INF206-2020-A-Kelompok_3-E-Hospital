@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container mt-5 pt-5">
-        <div class="row search-container">
-            <div class="col-md-6">
+        <div class="row search-container justify-content-center">
+            <div class="col-md-4">
                 <form enctype="multipart/form-data" method="POST" action="">
                     @csrf
                     <div class="mb-3">
