@@ -15,17 +15,17 @@
                                 <tbody class="table-body">
                                     <tr>
                                         <td>
-                                            <a href="{{url('pilih-login')}}">Login</a> 
+                                            <a href="{{ url('login') }}">Login</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="{{url('signUp')}}">Sign Up</a> 
+                                            <a href="{{ url('signUp') }}">Sign Up</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="{{ url('input-data') }}">Input Data</a> 
+                                            <a href="{{ url('input-data') }}">Input Data</a>
                                         </td>
                                     </tr>
                                 </tbody>
