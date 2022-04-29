@@ -3,7 +3,9 @@
     <div class="banner mb-3">
         <div class="profile-image shadow"></div>
         <div class="profile-info text-center mt-2">
-            <h4 class="name fw-bold">Fulan bin Fulan</h4>
+            <h4 class="name fw-bold">Fulan bin Fulan <a href="{{ url('edit-profile') }}"><i
+                        class="bi bi-pencil-fill"></i></a>
+            </h4>
             <span class="text-muted">fulan@gmail.com</span>
         </div>
         <div class="container ">
@@ -15,12 +17,17 @@
                                 <tbody class="table-body">
                                     <tr>
                                         <td>
-                                            <a href="">Login</a> 
+                                            <a href="{{ url('login') }}">Login</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="{{ url('input-data') }}">Input Data</a> 
+                                            <a href="{{ url('signUp') }}">Sign Up</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{ url('input-data') }}">Input Data</a>
                                         </td>
                                     </tr>
                                 </tbody>

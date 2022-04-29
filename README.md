@@ -11,6 +11,9 @@ git clone https://github.com/frisrsyd/kelompok-3_INF_E-Hospital
 ```bash
 composer install
 ```
+```bash
+composer update
+```
 
 3. run serve with
 

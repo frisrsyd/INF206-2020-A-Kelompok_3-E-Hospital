@@ -2,7 +2,6 @@
 
 @section('content')
 
-<meta charset="utf-8">
 <style type="text/css">
     .login {
         margin: 50px auto;
@@ -46,10 +45,10 @@
 </div>
 
 <p> </p>
-<center><button type="submit" class="btn btn-primary btn-block">Log In</button></center>
+<center><button type="submit" class="btn btnSignIn btn-block">Log In</button></center>
 <hr>
-<p class="text-center" style="color: black">Belum punya akun? <a href="#" style="color: blue">Register</a> sekarang!</p>
-<p class="text-center" style="color: black">Lupa password? klik <a href="#" style="color: blue">disini</a> </p>
+<p class="text-center" style="color: black">Belum punya akun? <a href="{{url('signUp')}}" style="color: blue">Register</a> sekarang!</p>
+<p class="text-center" style="color: black">Lupa password? klik <a href="{{url('lupapassword')}}" style="color: blue">disini</a> </p>
 </form>
 </div>
 </div>
