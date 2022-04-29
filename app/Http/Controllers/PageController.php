@@ -66,4 +66,9 @@ class PageController extends Controller
         return view('page.detail-history');
     }
 
+    public function editProfile()
+    {
+        return view('page.edit-profile');
+    }
+
 }
