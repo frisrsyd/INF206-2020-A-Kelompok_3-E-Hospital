@@ -236,13 +236,15 @@ input[type="number"] {
     color: #333333;
     font-weight: lighter;
 }
-/* .send-control{
+
+
+.detail-control{
     background-color: #FFC839;
-    height: 3em;
-    width: 40.5em;
+    /* height: 3em; */
+    /* width: 40.5em; */
     border-radius: 100px;
     border: none;
     color: #333333;
-    font-weight: lighter;
-} */
+    font-weight: lighter;;
+}
 

@@ -22,8 +22,8 @@
                                                     placeholder="Masukkan Code Verifikasi">
                                             </div>
                                             <div class="text-center me-4">
-                                                <a href="{{ url('inputUlangPassword') }}">
-                                                    <button class="btn btnSignIn mb-md-4 shadow" type="submit">Next</button>
+                                                <a href="{{ url('reset-password') }}">
+                                                    <button class="btn btnSignIn mb-md-4 shadow" type="button">Next</button>
                                                 </a>
                                             </div>
                                         </form>

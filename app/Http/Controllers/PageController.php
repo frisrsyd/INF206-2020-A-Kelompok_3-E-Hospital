@@ -36,18 +36,9 @@ class PageController extends Controller
         return view('page.signUp');
     }
 
-    public function pilihLogin()
-    {
-        return view('page.pilih-login');
-    }
     public function login()
     {
         return view('page.login');
-    }
-
-    public function loginAdmin()
-    {
-        return view('page.login-admin');
     }
 
     public function lupapassword()
@@ -55,7 +46,7 @@ class PageController extends Controller
         return view('page.lupapassword');
     }
 
-    public function inputUlangPassword()
+    public function resetPassword()
     {
         return view('page.inputUlangPassword');
     }
@@ -63,6 +54,16 @@ class PageController extends Controller
     public function ketersediaanTool()
     {
         return view('page.ketersediaan');
+    }
+
+    public function historyPinjam()
+    {
+        return view('page.history');
+    }
+
+    public function detailHistory()
+    {
+        return view('page.detail-history');
     }
 
 }

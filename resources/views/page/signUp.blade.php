@@ -16,25 +16,31 @@
                                                     <div class="col text-center">
                                                         <form enctype="multipart/form-data" method="POST" action="">
                                                             @csrf
-                                                            
+
                                                             <div class="mx-5 mb-3">
-                                                                <input name="name" type="text" class="form-control" placeholder="Masukkan Nama">
+                                                                <input name="name" type="text" class="form-control"
+                                                                    placeholder="Masukkan Nama">
                                                             </div>
                                                             <div class="mx-5 mb-3">
-                                                                <input name="nik" type="number" class="form-control" placeholder="Masukkan NIK">
+                                                                <input name="nik" type="number" class="form-control"
+                                                                    placeholder="Masukkan NIK">
                                                             </div>
                                                             <div class="mx-5 mb-3">
-                                                                <input name="username" type="text" class="form-control" placeholder="Masukkan Username">
+                                                                <input name="username" type="text" class="form-control"
+                                                                    placeholder="Masukkan Username">
                                                             </div>
                                                             <div class="mx-5 mb-3">
-                                                                <input name="password" type="password" class="form-control" placeholder="Masukkan Password">
+                                                                <input name="password" type="password"
+                                                                    class="form-control" placeholder="Masukkan Password">
                                                             </div>
-                                                            <button class="btn btnSignIn mb-md-4 shadow" type="submit">Sign Up</button>
-                                                            <div><a href="{{ 'pilih-login' }}" class="btn" style="color: blue">Login Here</a></div>
+                                                            <button class="btn btnSignIn mb-md-4 shadow" type="submit">Sign
+                                                                Up</button>
+                                                            <div><a href="{{ 'login' }}" class="btn"
+                                                                    style="color: blue">Login Here</a></div>
                                                         </form>
                                                     </div>
                                                 </div>
-                                            </div> 
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
