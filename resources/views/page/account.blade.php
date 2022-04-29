@@ -3,7 +3,9 @@
     <div class="banner mb-3">
         <div class="profile-image shadow"></div>
         <div class="profile-info text-center mt-2">
-            <h4 class="name fw-bold">Fulan bin Fulan</h4>
+            <h4 class="name fw-bold">Fulan bin Fulan <a href="{{ url('edit-profile') }}"><i
+                        class="bi bi-pencil-fill"></i></a>
+            </h4>
             <span class="text-muted">fulan@gmail.com</span>
         </div>
         <div class="container ">

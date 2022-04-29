@@ -17,3 +17,4 @@ Route::get('reset-password', [PageController::class, 'resetPassword']);
 Route::get('ketersediaan-tool', [PageController::class, 'ketersediaanTool']);
 Route::get('history-pinjam', [PageController::class, 'historyPinjam']);
 Route::get('detail-history', [PageController::class, 'detailHistory']);
+Route::get('edit-profile', [PageController::class, 'editProfile']);
