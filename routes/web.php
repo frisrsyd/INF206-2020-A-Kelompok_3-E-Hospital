@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RegisterController;
 
 
 Route::get('/', [PageController::class, 'index']);
@@ -19,3 +20,5 @@ Route::get('history-pinjam', [PageController::class, 'historyPinjam']);
 Route::get('detail-history', [PageController::class, 'detailHistory']);
 Route::get('edit-profile', [PageController::class, 'editProfile']);
 Route::get('notifikasi', [PageController::class, 'notifikasi']);
+
+Route::post('register', [RegisterController::class, 'store']);
