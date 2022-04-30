@@ -76,4 +76,9 @@ class PageController extends Controller
         return view('page.syarat-ketentuan');
     }
 
+    public function onLoan()
+    {
+        return view('page.on-loan-user');
+    }
+
 }
