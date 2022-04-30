@@ -11,11 +11,34 @@ git clone https://github.com/frisrsyd/kelompok-3_INF_E-Hospital
 ```bash
 composer install
 ```
+
 ```bash
 composer update
 ```
 
-3. run serve with
+3. migrate the table
+
+Copy the contents of `.env.example` file to new `.env` file:
+
+```sh
+$ cp .env.example .env
+```
+
+Create an application encryption key:
+
+```sh
+$ php artisan key:generate
+```
+
+Create an empty database and fill in the `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` fields in the `.env` file to match the credentials of your newly created database.
+
+Run the migrations:
+
+```sh
+$ php artisan migrate
+```
+
+4. run serve with
 
 ```bash
 php artisan serve
