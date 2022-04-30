@@ -248,3 +248,8 @@ input[type="number"] {
     font-weight: lighter;;
 }
 
+.logoutBtn{
+    border: none;
+    background: transparent;
+}
+
