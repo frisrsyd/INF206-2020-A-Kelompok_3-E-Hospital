@@ -71,4 +71,9 @@ class PageController extends Controller
         return view('page.edit-profile');
     }
 
+    public function notifikasi()
+    {
+        return view('page.notifications');
+    }
+
 }
