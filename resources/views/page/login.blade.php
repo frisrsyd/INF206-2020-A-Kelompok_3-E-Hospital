@@ -30,20 +30,21 @@
             <img src="img/logo.png" height="50" style="display:block; margin:auto;">
         </div>
         <div class="login">
-            @if (session('error'))
-                <div class="alert alert-danger">
-                    <b>Opps!</b> {{ session('error') }}
-                </div>
-            @endif
-            <form method="post">
+            <form method="post" action="/login">
                 @csrf
 
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                        placeholder="Email" required autofocus value="{{ old('email') }}">
+                    @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
 
                 <p> </p>

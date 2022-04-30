@@ -66,10 +66,9 @@
                                                                 </div>
                                                             @enderror
                                                             <div class="mx-5 mb-3">
-                                                                <input name="password"
-                                                                    type="password @error('password') is-invalid @enderror"
-                                                                    class="form-control" placeholder="Masukkan Password"
-                                                                    required>
+                                                                <input name="password" type="password"
+                                                                    class="form-control @error('password') is-invalid @enderror"
+                                                                    placeholder="Masukkan Password" required>
                                                             </div>
                                                             @error('password')
                                                                 <div class="invalid-feedback">
@@ -77,10 +76,9 @@
                                                                 </div>
                                                             @enderror
                                                             <div class="mx-5 mb-3">
-                                                                <input name="password_confirmed"
-                                                                    type="password @error('password_confirmed') is-invalid @enderror"
-                                                                    class="form-control" placeholder="Konfirmasi Password"
-                                                                    required>
+                                                                <input name="password_confirmed" type="password"
+                                                                    class="form-control @error('password_confirmed') is-invalid @enderror"
+                                                                    placeholder="Konfirmasi Password" required>
                                                             </div>
                                                             @error('password_confirmed')
                                                                 <div class="invalid-feedback">
