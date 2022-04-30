@@ -20,3 +20,4 @@ Route::get('detail-history', [PageController::class, 'detailHistory']);
 Route::get('edit-profile', [PageController::class, 'editProfile']);
 Route::get('syarat-ketentuan', [PageController::class, 'syaratKetentuan']);
 Route::get('on-loan-user', [PageController::class, 'onLoanUser']);
+Route::get('detail-on-loan-user', [PageController::class, 'DetailonLoanUser']);
