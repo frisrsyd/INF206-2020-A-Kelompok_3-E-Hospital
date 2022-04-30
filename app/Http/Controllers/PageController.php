@@ -86,4 +86,9 @@ class PageController extends Controller
         return view('page.detail-on-loan-user');
     }
 
+    public function onLoanAdmin()
+    {
+        return view('page.on-loan-admin');
+    }
+
 }
