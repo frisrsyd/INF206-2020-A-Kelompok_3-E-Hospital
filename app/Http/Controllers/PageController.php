@@ -76,4 +76,14 @@ class PageController extends Controller
         return view('page.notifications');
     }
 
+    public function strukPeminjaman()
+    {
+        return view('page.struk-peminjaman');
+    }
+
+    public function cetakStruk()
+    {
+        return view('page.cetak-struk');
+    }
+
 }

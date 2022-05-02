@@ -18,6 +18,8 @@ Route::get('history-pinjam', [PageController::class, 'historyPinjam']);
 Route::get('detail-history', [PageController::class, 'detailHistory']);
 Route::get('edit-profile', [PageController::class, 'editProfile']);
 Route::get('notifikasi', [PageController::class, 'notifikasi']);
+Route::get('struk-peminjaman', [PageController::class, 'strukPeminjaman']);
+Route::get('cetak-struk', [PageController::class, 'cetakStruk']);
 
 // middleware guest
 Route::get('signUp', [PageController::class, 'signUp'])->middleware('guest');
