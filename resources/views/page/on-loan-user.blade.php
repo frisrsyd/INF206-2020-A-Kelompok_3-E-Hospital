@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 card form-ketersediaan shadow mb-3">
-                <a href="{{ url('detail-history') }}">
+                <a href="{{ url('detail-on-loan-user') }}">
                     <div class="card-body">
                         <table class="table table-borderless">
                             <tbody class="text-center">
@@ -20,7 +20,7 @@
                                         <p>Stetoskop</p>
                                     </td>
                                     <td>
-                                        <p>Details...</p>
+                                        <p>Tanggal Pengembalian : 25-5-2022</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -30,7 +30,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <p>Tanggal Pengembalian : 25-5-2022</p>
+                                        <p style="color: blue">Details...</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -40,7 +40,7 @@
             </div>
             <div class="w-100 d-none d-md-block"></div>
             <div class="col-md-6 card form-ketersediaan shadow mb-3">
-                <a href="{{ url('detail-history') }}">
+                <a href="{{ url('detail-on-loan-user') }}">
                     <div class="card-body">
                         <table class="table table-borderless">
                             <tbody class="text-center">
@@ -49,7 +49,7 @@
                                         <p>Stetoskop</p>
                                     </td>
                                     <td>
-                                        <p>Details...</p>
+                                        <p>Tanggal Pengembalian : 25-5-2022</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -59,7 +59,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <p>Tanggal Pengembalian : 25-5-2022</p>
+                                        <p style="color: blue">Details...</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -69,7 +69,7 @@
             </div>
             <div class="w-100 d-none d-md-block"></div>
             <div class="col-md-6 card form-ketersediaan shadow mb-3">
-                <a href="{{ url('detail-history') }}">
+                <a href="{{ url('detail-on-loan-user') }}">
                     <div class="card-body">
                         <table class="table table-borderless">
                             <tbody class="text-center">
@@ -78,7 +78,7 @@
                                         <p>Stetoskop</p>
                                     </td>
                                     <td>
-                                        <p>Details...</p>
+                                        <p>Tanggal Pengembalian : 25-5-2022</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -88,7 +88,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <p>Tanggal Pengembalian : 25-5-2022</p>
+                                        <p style="color: blue">Details...</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -98,7 +98,7 @@
             </div>
             <div class="w-100 d-none d-md-block"></div>
             <div class="col-md-6 card form-ketersediaan shadow mb-3">
-                <a href="{{ url('detail-history') }}">
+                <a href="{{ url('detail-on-loan-user') }}">
                     <div class="card-body">
                         <table class="table table-borderless">
                             <tbody class="text-center">
@@ -107,7 +107,7 @@
                                         <p>Stetoskop</p>
                                     </td>
                                     <td>
-                                        <p>Details...</p>
+                                        <p>Tanggal Pengembalian : 25-5-2022</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -117,7 +117,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <p>Tanggal Pengembalian : 25-5-2022</p>
+                                        <p style="color: blue">Details...</p>
                                     </td>
                                 </tr>
                             </tbody>
