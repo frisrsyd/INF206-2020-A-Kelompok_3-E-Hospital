@@ -1,5 +1,11 @@
 @extends('app')
 @section('content')
+    <div class="banner_top">
+
+        @if (session('status'))
+            <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
+        @endif
+    </div>
     <div class="banner mb-3">
         @auth
             <div class="profile-image shadow"></div>
