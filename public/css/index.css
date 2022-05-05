@@ -190,6 +190,9 @@ input[type="number"] {
 .banner {
     margin-top: 230px;
 }
+.banner_top{
+    margin-top: 7em;
+}
 .banner .name {
     color: white;
 }
