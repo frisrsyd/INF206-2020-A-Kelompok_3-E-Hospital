@@ -75,12 +75,12 @@
                                 </tr>
                                 <tr>
                                     <td class="text-center" colspan="2">
-                                        <p>sisa Waktu pengembalian:</p>
-                                        <p id="sisa waktu-pengembalian">23:59:59</p>
+                                        <p>sisa Waktu pengambilan:</p>
+                                        <p id="sisa waktu-pengambilan">23:59:59</p>
                                     </td>
                                 </tr><tr>
                                     <td class="text-center" colspan="2">
-                                        <p>*Note:Jika diambil dalam jangka</p>
+                                        <p>*Note:Jika tidak diambil dalam jangka</p>
                                       <p>waktu yang telah ditentukan, peminjaman </p>
                                         <p>akan tercancel secara otomatis </p>
                                     </td>
