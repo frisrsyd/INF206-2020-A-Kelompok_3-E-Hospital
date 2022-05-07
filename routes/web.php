@@ -22,4 +22,6 @@ Route::get('syarat-ketentuan', [PageController::class, 'syaratKetentuan']);
 Route::get('on-loan-user', [PageController::class, 'onLoanUser']);
 Route::get('detail-on-loan-user', [PageController::class, 'DetailonLoanUser']);
 Route::get('on-loan-admin', [PageController::class, 'onLoanAdmin']);
-Route::get('detail-on-loan-admin', [PageController::class, 'DetailonLoanAdmin']);
+Route::get('detail-on-loan-admin', [PageController::class, 'DetailonLoanAdmin']);  
+Route::get('antrian', [PageController::class, 'antrian']);
+Route::get('detail-antrian', [PageController::class, 'detailAntrian']);

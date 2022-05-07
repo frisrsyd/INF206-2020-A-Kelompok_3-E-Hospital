@@ -96,4 +96,14 @@ class PageController extends Controller
         return view('page.detail-on-loan-admin');
     }
 
+    public function antrian()
+    {
+        return view('page.antrian');
+    }
+
+    public function detailAntrian()
+    {
+        return view('page.detail-antrian');
+    }
+
 }
