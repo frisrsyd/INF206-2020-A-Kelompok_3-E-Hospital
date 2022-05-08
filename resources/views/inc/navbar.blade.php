@@ -14,11 +14,10 @@
                         Notifications</a>
                     <a class="btn bg-gradient-primary" href="{{ url('history-pinjam') }}"><i
                             class="bi bi-clock-history"></i> History</a>
-                    <a href="{{ url('#') }}" class="btn" style="color: black"><img src="img/on-loan.png"
+                    <a href="{{ url('on-loan-user') }}" class="btn" style="color: black"><img src="img/on-loan.png"
                             alt=""> On Loan</a>
                     <a href="{{ 'account' }}" class="btn" style="color: black"><img src="img/account.png"
                             height="33" alt=""></a>
-
                 </div>
             </div>
         </div>
