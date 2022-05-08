@@ -71,6 +71,21 @@ class PageController extends Controller
         return view('page.edit-profile');
     }
 
+    public function notifikasi()
+    {
+        return view('page.notifications');
+    }
+
+    public function strukPeminjaman()
+    {
+        return view('page.struk-peminjaman');
+    }
+
+    public function cetakStruk()
+    {
+        return view('page.cetak-struk');
+    }
+  
     public function syaratKetentuan()
     {
         return view('page.syarat-ketentuan');

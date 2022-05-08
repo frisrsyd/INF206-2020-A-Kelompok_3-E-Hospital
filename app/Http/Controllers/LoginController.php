@@ -4,37 +4,29 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Session;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function authenticate(Request $request)
     {
-        if (Auth::check()) {
-            return redirect('home');
-        }else{
-            return view('page.login');
+        $credentials = $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/')->with('success', 'Login Success');
         }
+        
+        return back()->with('status', 'Email atau Password salah!');
     }
 
-    public function actionlogin(Request $request)
-    {
-        $data = [
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-        ];
-
-        if (Auth::Attempt($data)) {
-            return redirect('home');
-        }else{
-            Session::flash('error', 'Email atau Password Salah');
-            return redirect('/');
-        }
-    }
-
-    public function actionlogout()
+    public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/')->with('status', 'Berhasil Logout!');
     }
 }
