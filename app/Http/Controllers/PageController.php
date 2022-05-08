@@ -4,17 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('page.index');
+        return view('page.index',[
+            'categories' => Category::all(),
+        ]);
     }
 
     public function allTools()
     {
-        return view('page.all-tools');
+        return view('page.all-tools', [
+            'categories' => Category::all(),
+        ]);
     }
 
     public function rekapPinjam()
@@ -23,8 +30,9 @@ class PageController extends Controller
     }
 
     public function inputData()
-    {
-        return view('page.input-data');
+    {   
+        $categories = DB::table('categories')->get();
+        return view('page.input-data', compact('categories'));
     }
 
     public function account()
@@ -51,9 +59,10 @@ class PageController extends Controller
         return view('page.inputUlangPassword');
     }
 
-    public function ketersediaanTool()
-    {
-        return view('page.ketersediaan');
+    public function ketersediaanTool(Post $post)
+    {   
+        $post = $post::where('category_id', $post->category_id)->get();
+        return view('page.ketersediaan', compact('post'));
     }
 
     public function historyPinjam()

@@ -26,7 +26,9 @@
                         <select id="toolName" name="toolName"
                             class="form-select form-control @error('toolName') is-invalid @enderror">
                             <option selected>Pilih jenis alat</option>
-                            <option value="stetoskop">Stetoskop</option>
+                            @foreach ($categories as $item)
+                                <option value="{{ $item->slug }}">{{ $item->name }}</option>
+                            @endforeach
                         </select>
                         @error('toolName')
                             <div class="invalid-feedback">

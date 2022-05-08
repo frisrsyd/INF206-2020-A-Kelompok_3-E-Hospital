@@ -15,11 +15,18 @@ class Post extends Model
         'tool_name',
         'link_location',
         'jumlah_alat',
+        'icon',
+        'category_id',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function getImageAttribute($value)

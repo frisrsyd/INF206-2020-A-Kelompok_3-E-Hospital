@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Category;
 
 class DataController extends Controller
 {
@@ -20,13 +21,26 @@ class DataController extends Controller
         $image = $request->file('image');
         $imageName = time(). '_' .$image->getClientOriginalName();
         $image->move($folder, $imageName);
-
+        $icon = 'img/icon/'.$request->toolName.'.png';
+        $category_name = $request->toolName;
+        
+        switch($category_name) {
+            case 'stetoskop':
+                $category_id = 1;
+                break;
+            case 'kursi-roda':
+                $category_id = 2;
+                break;
+        }
+        
         $post_ref = Post::create([
+            'category_id' => $category_id,
             'image' => $imageName,
             'tool_name' => $request->toolName,
             'link_location' => $request->location,
             'jumlah_alat' => $request->jumlahAlat,
             'user_id' => auth()->user()->id,
+            'icon' => $icon,
         ]);
 
         if($post_ref) {
