@@ -94,5 +94,40 @@ class PageController extends Controller
     {
         return view('page.cetak-struk');
     }
+  
+    public function syaratKetentuan()
+    {
+        return view('page.syarat-ketentuan');
+    }
+
+    public function onLoanUser()
+    {
+        return view('page.on-loan-user');
+    }
+
+    public function DetailonLoanUser()
+    {
+        return view('page.detail-on-loan-user');
+    }
+
+    public function onLoanAdmin()
+    {
+        return view('page.on-loan-admin');
+    }
+
+    public function DetailonLoanAdmin()
+    {
+        return view('page.detail-on-loan-admin');
+    }
+
+    public function antrian()
+    {
+        return view('page.antrian');
+    }
+
+    public function detailAntrian()
+    {
+        return view('page.detail-antrian');
+    }
 
 }
