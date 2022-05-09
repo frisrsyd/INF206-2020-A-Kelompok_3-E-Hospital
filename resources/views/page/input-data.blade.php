@@ -10,7 +10,7 @@
     <div class="container mt-5 pt-5">
         <div class="row search-container justify-content-center">
             <div class="col-md-4">
-                <form enctype="multipart/form-data" method="POST" action="/input-data"
+                <form enctype="multipart/form-data" method="POST" action="/input-data">
                     @csrf
                     <div class="mb-3">
                         <small for="image" class="keterangan">Input Data</small>
