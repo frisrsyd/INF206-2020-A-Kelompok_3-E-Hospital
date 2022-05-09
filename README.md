@@ -3,7 +3,7 @@
 1. clone the repository
 
 ```bash
-git clone https://github.com/frisrsyd/kelompok-3_INF_E-Hospital
+git clone https://github.com/frisrsyd/INF206-2020-A-Kelompok_3-E-Hospital
 ```
 
 2. go to folder and run
