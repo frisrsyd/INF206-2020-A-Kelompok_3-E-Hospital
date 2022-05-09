@@ -15,10 +15,6 @@ composer install
 composer update
 ```
 
-```bash
-composer update
-```
-
 3. migrate the table
 
 Copy the contents of `.env.example` file to new `.env` file:
