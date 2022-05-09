@@ -14,9 +14,9 @@
                             <input name="search" type="search" class="searchBox" placeholder="Search....">
                             <a href="#" class="searchIcon ms-5">
                                 {{-- <img src="img/search.png" alt=""> --}}
-                                <i class="bi bi-search" style="color: #333333"></i>
+                                <button type="submit" class="logoutBtn"><i class="bi bi-search"
+                                        style="color: #333333"></i></button>
                             </a>
-
                         </div>
                     </form>
                 </div>
