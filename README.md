@@ -31,6 +31,8 @@ $ php artisan key:generate
 
 Create an empty database and fill in the `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` fields in the `.env` file to match the credentials of your newly created database.
 
+following the .env file, change `DB_DATABASE = e_hospital`, so make the empty database name is `e_hospital`
+
 Run the migrations:
 
 ```sh
