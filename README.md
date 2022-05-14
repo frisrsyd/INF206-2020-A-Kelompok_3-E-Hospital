@@ -1,3 +1,9 @@
+<br>
+<p align="center"><img src="public/img/logo.png" alt="E-Hospital Logo" width="300"></p>
+<br>
+## About E-Hospital
+<p>E-Hospital is a web application that allows people to have medical portable tool for a time without buy it, just borrow or rent it. The application is designed to be used by people who are in need of medical services.</p>
+
 ## Installation
 
 1. clone the repository
@@ -11,6 +17,7 @@ git clone https://github.com/frisrsyd/INF206-2020-A-Kelompok_3-E-Hospital
 ```bash
 composer install
 ```
+
 ```bash
 composer update
 ```
