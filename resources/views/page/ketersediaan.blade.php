@@ -12,7 +12,7 @@
         <div class="row">
             @forelse ($post as $item)
                 <div class="col-md-6 card form-ketersediaan shadow mb-3">
-                    <a href="{{ url('rekap-pinjam') }}">
+                    <a href="rekap-pinjam/{{ $item->id }}">
                         <div class="card-body">
                             <table class="table table-borderless">
                                 <tbody class="text-center">

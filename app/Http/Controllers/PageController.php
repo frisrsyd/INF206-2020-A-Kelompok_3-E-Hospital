@@ -24,9 +24,10 @@ class PageController extends Controller
         ]);
     }
 
-    public function rekapPinjam()
-    {
-        return view('page.rekap-pinjam');
+    public function rekapPinjam(Post $post)
+    {   
+        $post = Post::find($post->id);
+        return view('page.rekap-pinjam', compact('post'));
     }
 
     public function inputData()
