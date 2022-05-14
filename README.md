@@ -20,13 +20,13 @@ composer update
 Copy the contents of `.env.example` file to new `.env` file:
 
 ```sh
-$ cp .env.example .env
+cp .env.example .env
 ```
 
 Create an application encryption key:
 
 ```sh
-$ php artisan key:generate
+php artisan key:generate
 ```
 
 Create an empty database and fill in the `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME` and `DB_PASSWORD` fields in the `.env` file to match the credentials of your newly created database.
@@ -36,7 +36,7 @@ following the .env file, change `DB_DATABASE = e_hospital`, so make the empty da
 Run the migrations:
 
 ```sh
-$ php artisan migrate
+php artisan migrate
 ```
 
 4. run serve with
