@@ -13,8 +13,7 @@
         </div>
         <div class="row">
             <div class="col col-md-6 text-center card card-post shadow">
-                <img src="{{ asset('img/tool_images/1652455457_stetoskopku.jpg') }}" class="card-img-top"
-                    alt="{{ $post->image }}">
+                <img src="{{ asset($post->image) }}" class="card-img-top" alt="{{ $post->image }}">
             </div>
         </div>
         <div class="row">

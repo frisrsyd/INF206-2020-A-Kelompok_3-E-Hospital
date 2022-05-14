@@ -31,6 +31,16 @@ class DataController extends Controller
             case 'kursi-roda':
                 $category_id = 2;
                 break;
+            case 'crutch':
+                $category_id = 3;
+                break;
+            case 'asthma-inhalator':
+                $category_id = 4;
+                break;
+            case 'infus':
+                $category_id = 5;
+                break;
+                
         }
         
         $post_ref = Post::create([

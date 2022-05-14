@@ -19,6 +19,13 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->timestamps();
         });
+        DB::table('categories')->insert([
+            ['name' => 'Stetoskop', 'slug' => 'stetoskop'],
+            ['name' => 'Kursi Roda', 'slug' => 'kursi-roda'],
+            ['name' => 'Crutch', 'slug' => 'crutch'],
+            ['name' => 'Asthma Inhalator', 'slug' => 'asthma-inhalator'],
+            ['name' => 'Infus', 'slug' => 'infus'],
+        ]);
     }
 
     /**
