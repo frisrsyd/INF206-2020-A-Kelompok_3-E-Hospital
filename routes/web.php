@@ -24,7 +24,7 @@ Route::post('login', [LoginController::class, 'authenticate']);
 
 // Protected Routes
 Route::middleware('auth')->group(function () {
-    Route::get('rekap-pinjam', [PageController::class, 'rekapPinjam']);
+    Route::get('ketersediaan-tool/rekap-pinjam/{post}', [PageController::class, 'rekapPinjam']);
     Route::get('input-data', [PageController::class, 'inputData']);
     Route::get('ketersediaan-tool/{post}', [PageController::class, 'ketersediaanTool']);
     Route::get('history-pinjam', [PageController::class, 'historyPinjam']);

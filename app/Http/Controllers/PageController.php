@@ -7,13 +7,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Auth;
 class PageController extends Controller
 {
     public function index()
     {
         return view('page.index',[
-            'categories' => Category::all(),
+            'categories' => Category::OrderBy('created_at')->paginate(10),
         ]);
     }
 
@@ -24,9 +24,10 @@ class PageController extends Controller
         ]);
     }
 
-    public function rekapPinjam()
-    {
-        return view('page.rekap-pinjam');
+    public function rekapPinjam(Post $post)
+    {   
+        $post = Post::find($post->id);
+        return view('page.rekap-pinjam', compact('post'));
     }
 
     public function inputData()
@@ -61,7 +62,8 @@ class PageController extends Controller
 
     public function ketersediaanTool(Post $post)
     {   
-        $post = $post::where('category_id', $post->category_id)->get();
+        // $post = DB::table('posts')->where('category_id', $post->id)->get();
+        $post = Post::where('category_id', $post->id)->get();
         return view('page.ketersediaan', compact('post'));
     }
 
