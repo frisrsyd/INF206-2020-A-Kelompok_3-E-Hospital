@@ -27,7 +27,7 @@
                             class="form-select form-control @error('toolName') is-invalid @enderror">
                             <option selected>Pilih jenis alat</option>
                             @foreach ($categories as $item)
-                                <option value="{{ $item->slug }}">{{ $item->name }}</option>
+                                <option value="{{ $item->name }}">{{ $item->name }}</option>
                             @endforeach
                         </select>
                         @error('toolName')

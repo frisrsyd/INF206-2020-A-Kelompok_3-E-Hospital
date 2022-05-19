@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('post_id');
             $table->foreignId('user_id');
-            $table->foreignId('category_id');
-            $table->string('image');
-            $table->string('icon');
-            $table->String('tool_name');
-            $table->String('link_location');
-            $table->integer('jumlah_alat');
-            $table->String('status')->default('tersedia');
+            $table->integer('jumlah_pinjam');
+            $table->String('status');
+            $table->date('tgl_mulai');
+            $table->date('tgl_akhir');
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('checkouts');
     }
 };

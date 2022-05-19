@@ -13,7 +13,7 @@ class DataController extends Controller
         $validatedData = $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'toolName' => 'required|declined_if:toolName,==,"Pilih jenis alat"',
-            'location' => 'required|url|active_url',
+            'location' => 'required|url',
             'jumlahAlat' => 'required|integer|min:1',
         ]);
 
@@ -25,24 +25,30 @@ class DataController extends Controller
         $category_name = $request->toolName;
         
         switch($category_name) {
-            case 'stetoskop':
+            case 'Stetoskop':
                 $category_id = 1;
                 break;
-            case 'kursi-roda':
+            case 'Kursi Roda':
                 $category_id = 2;
                 break;
-            case 'crutch':
+            case 'Crutch':
                 $category_id = 3;
                 break;
-            case 'asthma-inhalator':
+            case 'Asthma Inhalator':
                 $category_id = 4;
                 break;
-            case 'infus':
+            case 'Infus':
                 $category_id = 5;
                 break;
                 
         }
-        
+        $status = '';
+        $jumlah_alat = $request->jumlahAlat;
+        if($jumlah_alat > 0){
+            $status = 'Tersedia';
+        }else{
+            $status = 'Tidak Tersedia';
+        }
         $post_ref = Post::create([
             'category_id' => $category_id,
             'image' => $imageName,
@@ -51,6 +57,7 @@ class DataController extends Controller
             'jumlah_alat' => $request->jumlahAlat,
             'user_id' => auth()->user()->id,
             'icon' => $icon,
+            'status' => $status,
         ]);
 
         if($post_ref) {

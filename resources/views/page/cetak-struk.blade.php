@@ -20,16 +20,13 @@
                                     <td class="ms-3 float-start">
                                         <p>Rincian alat yang dipinjam:</p>
                                     </td>
-                                    <td>
-                                        <p>#</p>
-                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>Nama Alat:</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->post->tool_name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -37,7 +34,7 @@
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->id }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -45,7 +42,7 @@
                                         <p>Nama Peminjam:</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->user->name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -53,7 +50,7 @@
                                         <p>Tanggal Pinjam:</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->tgl_mulai }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -61,7 +58,7 @@
                                         <p>Tanggal Kembali:</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->tgl_akhir }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -69,7 +66,7 @@
                                         <p>Lokasi Peminjaman:</p>
                                     </td>
                                     <td>
-                                        <p>#</p>
+                                        <p>{{ $checkout->post->link_location }}</p>
                                     </td>
                                 </tr>
                             </tbody>

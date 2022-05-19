@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\checkout;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 class PageController extends Controller
@@ -60,11 +61,11 @@ class PageController extends Controller
         return view('page.inputUlangPassword');
     }
 
-    public function ketersediaanTool(Post $post)
+    public function ketersediaanTool(Post $post, checkout $checkout)
     {   
         // $post = DB::table('posts')->where('category_id', $post->id)->get();
         $post = Post::where('category_id', $post->id)->get();
-        return view('page.ketersediaan', compact('post'));
+        return view('page.ketersediaan', compact('post', 'checkout'));
     }
 
     public function historyPinjam()
@@ -87,14 +88,14 @@ class PageController extends Controller
         return view('page.notifications');
     }
 
-    public function strukPeminjaman()
-    {
-        return view('page.struk-peminjaman');
+    public function strukPeminjaman(checkout $checkout)
+    {   
+        return view('page.struk-peminjaman', compact('checkout'));
     }
 
-    public function cetakStruk()
+    public function cetakStruk(checkout $checkout)
     {
-        return view('page.cetak-struk');
+        return view('page.cetak-struk', compact('checkout'));
     }
   
     public function syaratKetentuan()
