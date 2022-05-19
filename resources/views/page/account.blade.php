@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <div class="card account-management">
                         <div class="card-body">
-                            <table class="table table-bordered">
+                            <table class="table table-borderless">
                                 <tbody class="table-body">
                                     @auth
                                         <tr>

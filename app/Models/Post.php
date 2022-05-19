@@ -17,6 +17,7 @@ class Post extends Model
         'jumlah_alat',
         'icon',
         'category_id',
+        'status',
     ];
 
     public function user()
@@ -27,6 +28,11 @@ class Post extends Model
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function checkout()
+    {
+        return $this->hasMany(Checkout::class);
     }
 
     public function getImageAttribute($value)

@@ -2,11 +2,10 @@
 
 @section('content')
     <div class="banner_top">
-
+        @if (session('status'))
+            <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
+        @endif
         <div class="container search-container">
-            @if (session('status'))
-                <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
-            @endif
             <div class="row">
                 <div class="col-md-3 text-center ">
                     <form>

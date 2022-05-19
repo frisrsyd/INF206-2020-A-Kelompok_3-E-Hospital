@@ -21,7 +21,7 @@
                                             <p>{{ $item->tool_name }}</p>
                                         </td>
                                         <td class=" tect-center">
-                                            <p>tersedia/tidak</p>
+                                            <p>{{ $item->status }}</p>
                                         </td>
                                     </tr>
                                     <tr>

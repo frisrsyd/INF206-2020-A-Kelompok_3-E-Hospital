@@ -13,7 +13,7 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'nik' => 'required|max:255',
             'username' => 'required',
-            'email' => 'required|email:dns',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 

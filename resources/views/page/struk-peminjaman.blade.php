@@ -34,33 +34,39 @@
                                         <p>Nama Alat:</p>
                                     </td>
                                     <td>
+                                        <p>{{ $checkout->post->tool_name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>No. Pinjam</p>
                                     </td>
-
+                                    <td>
+                                        <p>{{ $checkout->id }}</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>Nama Peminjam:</p>
                                     </td>
-
+                                    <td>
+                                        <p>{{ $checkout->user->name }}</p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>Tanggal Pinjam:</p>
+                                    </td>
+                                    <td>
+                                        <p>{{ $checkout->tgl_mulai }}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>Tanggal Kembali:</p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="ms-3 float-start">
-                                        <p>Lokasi Peminjaman:</p>
+                                    <td>
+                                        <p>{{ $checkout->tgl_akhir }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -69,7 +75,7 @@
                                     </td>
                                     <td>
                                         <a href="#" target="_blank">
-
+                                            <p>{{ $checkout->post->link_location }}</p>
                                         </a>
                                     </td>
                                 </tr>
@@ -91,9 +97,13 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="cetak-struk" target="_blank">
+                    {{-- <a href="{{ url('cetak-struk/' . $checkout->id) }}" target="_blank"> --}}
+                    <form action="{{ url('pinjam/' . $checkout->post_id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
                         <button class="btn btnSignIn mb-md-4 shadow" type="submit">Cetak Bukti</button>
-                    </a>
+                    </form>
+                    {{-- </a> --}}
                 </div>
             </div>
             <div class="w-100 d-none d-md-block"></div>
