@@ -30,9 +30,7 @@ class CheckoutController extends Controller
             'status' => $status,
         ]);
         if($post){
-            $url = 'cetak-struk/' . $checkout->id;
-            echo "<script>window.open('".$url."', '_blank')</script>";
-            // return redirect('cetak-struk/' . $checkout->id)->with('status', 'Berhasil checkout');
+            return redirect('cetak-struk/' . $checkout->id)->with('status', 'Berhasil checkout');
         }else{
             return redirect('/')->with('status', 'Gagal checkout');
         }
