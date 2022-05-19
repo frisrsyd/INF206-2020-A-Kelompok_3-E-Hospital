@@ -27,4 +27,22 @@ class RegisterController extends Controller
             return redirect('/signUp')->with('status', 'Register Failed');
         }
     }
+    
+    public function update(Request $request, User $user)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'nik' => 'required|max:255',
+            'username' => 'required',
+            'email' => 'required|email',
+        ]);
+
+        $user->update($validatedData);
+
+        if($user) {
+            return redirect('/account')->with('status', 'Update Success');
+        }else{
+            return redirect('/account')->with('status', 'Update Failed');
+        }
+    }
 }

@@ -14,9 +14,10 @@
                                             <div class="container mt-3 pt-5">
                                                 <div class="row search-container">
                                                     <div class="col text-center">
-                                                        <form enctype="multipart/form-data" method="POST" action="">
+                                                        <form enctype="multipart/form-data" method="POST"
+                                                            action="{{ url('edit-profile/' . auth()->user()->id) }}">
                                                             @csrf
-
+                                                            @method('PUT')
                                                             <div class="mx-5 mb-3">
                                                                 <input name="name" type="text" class="form-control"
                                                                     placeholder="Masukkan Nama">
