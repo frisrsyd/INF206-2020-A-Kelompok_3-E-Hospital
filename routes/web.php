@@ -42,6 +42,8 @@ Route::middleware('auth')->group(function () {
     Route::put('pinjam/{post}', [CheckoutController::class, 'update']);
     Route::post('pinjam/{post}', [CheckoutController::class, 'store']);
     Route::post('checkout/{post}', [CheckoutController::class, 'store']);
+    // update data user
+    Route::put('edit-profile/{user}', [RegisterController::class, 'update']);
     
     Route::get('syarat-ketentuan', [PageController::class, 'syaratKetentuan']);
     Route::get('on-loan-user', [PageController::class, 'onLoanUser']);

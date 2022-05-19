@@ -12,9 +12,14 @@ use Illuminate\Support\Facades\Auth;
 class PageController extends Controller
 {
     public function index()
-    {
+    {   
+        $category = Category::OrderBy('created_at');
+        if(request('search')){
+            $category = $category->where('name','like','%'.request('search').'%');
+        }
+
         return view('page.index',[
-            'categories' => Category::OrderBy('created_at')->paginate(10),
+            'categories' => $category->paginate(10),
         ]);
     }
 

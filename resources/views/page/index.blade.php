@@ -10,7 +10,8 @@
                 <div class="col-md-3 text-center ">
                     <form>
                         <div class="search-control">
-                            <input name="search" type="search" class="searchBox" placeholder="Search....">
+                            <input name="search" type="search" class="searchBox" placeholder="Search...."
+                                value="{{ request('search') }}">
                             <a href="#" class="searchIcon ms-5">
                                 {{-- <img src="img/search.png" alt=""> --}}
                                 <button type="submit" class="logoutBtn"><i class="bi bi-search"
