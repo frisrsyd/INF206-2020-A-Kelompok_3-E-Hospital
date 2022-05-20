@@ -34,7 +34,7 @@
                                         <p>Nama Alat:</p>
                                     </td>
                                     <td>
-                                        <p>Stetoskop</p>
+                                        <p>{{ $checkout->post->tool_name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -42,7 +42,7 @@
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
-                                        <p>230522001</p>
+                                        <p>{{ $checkout->id }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -50,7 +50,7 @@
                                         <p>Nama Peminjam:</p>
                                     </td>
                                     <td>
-                                        <p>Fulan bin fulan</p>
+                                        <p>{{ $checkout->user->name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -58,7 +58,7 @@
                                         <p>Tanggal Pinjam:</p>
                                     </td>
                                     <td>
-                                        <p>23-05-2022</p>
+                                        <p>{{ $checkout->tgl_mulai }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -66,15 +66,7 @@
                                         <p>Tanggal Kembali:</p>
                                     </td>
                                     <td>
-                                        <p>25-05-2022</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="ms-3 float-start">
-                                        <p>Lokasi Peminjaman:</p>
-                                    </td>
-                                    <td>
-                                        <p>R.S Zainal Abidin </p>
+                                        <p>{{ $checkout->tgl_akhir }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -82,8 +74,7 @@
                                         <p>Link Lokasi Peminjaman:</p>
                                     </td>
                                     <td>
-                                        <a href="#" target="_blank">
-                                            <p>maps.google.com/....</p>
+                                            <p>{{ $checkout->post->link_location }}</p>
                                         </a>
                                     </td>
                                 </tr>

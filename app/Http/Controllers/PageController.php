@@ -4,27 +4,42 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Models\Post;
+use App\Models\Category;
+use App\Models\checkout;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class PageController extends Controller
 {
     public function index()
-    {
-        return view('page.index');
+    {   
+        $category = Category::OrderBy('created_at');
+        if(request('search')){
+            $category = $category->where('name','like','%'.request('search').'%');
+        }
+
+        return view('page.index',[
+            'categories' => $category->paginate(10),
+        ]);
     }
 
     public function allTools()
     {
-        return view('page.all-tools');
+        return view('page.all-tools', [
+            'categories' => Category::all(),
+        ]);
     }
 
-    public function rekapPinjam()
-    {
-        return view('page.rekap-pinjam');
+    public function rekapPinjam(Post $post)
+    {   
+        $post = Post::find($post->id);
+        return view('page.rekap-pinjam', compact('post'));
     }
 
     public function inputData()
-    {
-        return view('page.input-data');
+    {   
+        $categories = DB::table('categories')->get();
+        return view('page.input-data', compact('categories'));
     }
 
     public function account()
@@ -51,9 +66,11 @@ class PageController extends Controller
         return view('page.inputUlangPassword');
     }
 
-    public function ketersediaanTool()
-    {
-        return view('page.ketersediaan');
+    public function ketersediaanTool(Post $post, checkout $checkout)
+    {   
+        // $post = DB::table('posts')->where('category_id', $post->id)->get();
+        $post = Post::where('category_id', $post->id)->get();
+        return view('page.ketersediaan', compact('post', 'checkout'));
     }
 
     public function historyPinjam()
@@ -76,14 +93,14 @@ class PageController extends Controller
         return view('page.notifications');
     }
 
-    public function strukPeminjaman()
-    {
-        return view('page.struk-peminjaman');
+    public function strukPeminjaman(checkout $checkout)
+    {   
+        return view('page.struk-peminjaman', compact('checkout'));
     }
 
-    public function cetakStruk()
+    public function cetakStruk(checkout $checkout)
     {
-        return view('page.cetak-struk');
+        return view('page.cetak-struk', compact('checkout'));
     }
   
     public function syaratKetentuan()
@@ -96,9 +113,9 @@ class PageController extends Controller
         return view('page.on-loan-user');
     }
 
-    public function DetailonLoanUser()
+    public function DetailonLoanUser(checkout $checkout)
     {
-        return view('page.detail-on-loan-user');
+        return view('page.detail-on-loan-user', compact('checkout'));
     }
 
     public function onLoanAdmin()

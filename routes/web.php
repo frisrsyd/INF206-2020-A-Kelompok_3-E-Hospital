@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\CheckoutController;
 
 // Public Routes
 // Page Routes
@@ -24,23 +25,29 @@ Route::post('login', [LoginController::class, 'authenticate']);
 
 // Protected Routes
 Route::middleware('auth')->group(function () {
-    Route::get('rekap-pinjam', [PageController::class, 'rekapPinjam']);
+    Route::get('ketersediaan-tool/rekap-pinjam/{post}', [PageController::class, 'rekapPinjam']);
     Route::get('input-data', [PageController::class, 'inputData']);
-    Route::get('ketersediaan-tool', [PageController::class, 'ketersediaanTool']);
+    Route::get('ketersediaan-tool/{post}', [PageController::class, 'ketersediaanTool']);
     Route::get('history-pinjam', [PageController::class, 'historyPinjam']);
     Route::get('detail-history', [PageController::class, 'detailHistory']);
     Route::get('edit-profile', [PageController::class, 'editProfile']);
     Route::get('notifikasi', [PageController::class, 'notifikasi']);
-    Route::get('struk-peminjaman', [PageController::class, 'strukPeminjaman']);
-    Route::get('cetak-struk', [PageController::class, 'cetakStruk']);
+    Route::get('struk-peminjaman/{checkout}', [PageController::class, 'strukPeminjaman']);
+    Route::get('cetak-struk/{checkout}', [PageController::class, 'cetakStruk']);
     //logout Route
     Route::post('logout', [LoginController::class, 'logout']);
     // input data routes
     Route::post('input-data', [DataController::class, 'store']);
+    //Pinjam Routes
+    Route::put('pinjam/{post}', [CheckoutController::class, 'update']);
+    Route::post('pinjam/{post}', [CheckoutController::class, 'store']);
+    Route::post('checkout/{post}', [CheckoutController::class, 'store']);
+    // update data user
+    Route::put('edit-profile/{user}', [RegisterController::class, 'update']);
     
     Route::get('syarat-ketentuan', [PageController::class, 'syaratKetentuan']);
     Route::get('on-loan-user', [PageController::class, 'onLoanUser']);
-    Route::get('detail-on-loan-user', [PageController::class, 'DetailonLoanUser']);
+    Route::get('detail-on-loan-user/{checkout}', [PageController::class, 'DetailonLoanUser']);
     Route::get('on-loan-admin', [PageController::class, 'onLoanAdmin']);
     Route::get('detail-on-loan-admin', [PageController::class, 'DetailonLoanAdmin']);  
     Route::get('antrian', [PageController::class, 'antrian']);
