@@ -138,4 +138,9 @@ class PageController extends Controller
         return view('page.detail-antrian');
     }
 
+    public function dataUser()
+    {
+        return view('page.data-user');
+    }
+
 }

@@ -52,4 +52,5 @@ Route::middleware('auth')->group(function () {
     Route::get('detail-on-loan-admin', [PageController::class, 'DetailonLoanAdmin']);  
     Route::get('antrian', [PageController::class, 'antrian']);
     Route::get('detail-antrian', [PageController::class, 'detailAntrian']);
+    Route::get('data-user', [PageController::class, 'dataUser']);
 });
