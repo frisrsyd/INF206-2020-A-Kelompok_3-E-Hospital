@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-
+                @foreach ($data_user as $item)
                 <div class=" card detail-control shadow mb-3">
                     <div class="card-body">
                         <table class="table table-borderless">
@@ -34,7 +34,7 @@
                                         <p>Username : </p>
                                     </td>
                                     <td>
-                                        <p></p>
+                                        <p>{{$item['username']}}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -42,20 +42,21 @@
                                         <p>NIK :</p>
                                     </td>
                                     <td>
-                                        <p>230522001</p>
+                                        <p>{{$item['nik']}}</p>
                                     </td>
-                                </tr>
+                                </tr>   
                                 <tr>
                                     <td class="ms-3 float-start">
                                         <p>E-mail :</p>
                                     </td>
                                     <td>
-                                        <p>Fulan bin fulan</p>
+                                        <p>{{$item['email']}}</p>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                @endforeach
                 </div>
                 <div class="text-center">
                     <p class="text-center" style="color: black"><a href="{{ url('history-pinjam') }}"

@@ -34,7 +34,7 @@
                                         <p>Nama Alat:</p>
                                     </td>
                                     <td>
-                                        <p>{{ $checkout->post->tool_name }}</p>
+                                        <p>{{ $data_DetailOnloan->jumlah_pinjam}}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -42,7 +42,7 @@
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
-                                        <p>{{ $checkout->id }}</p>
+                                        <p>{{ $data_DetailOnloan->id }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -50,7 +50,7 @@
                                         <p>Nama Peminjam:</p>
                                     </td>
                                     <td>
-                                        <p>{{ $checkout->user->name }}</p>
+                                        <p>{{ $data_DetailOnloan->user_id }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -58,7 +58,7 @@
                                         <p>Tanggal Pinjam:</p>
                                     </td>
                                     <td>
-                                        <p>{{ $checkout->tgl_mulai }}</p>
+                                        <p>{{$data_DetailOnloan->tgl_mulai }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -66,7 +66,7 @@
                                         <p>Tanggal Kembali:</p>
                                     </td>
                                     <td>
-                                        <p>{{ $checkout->tgl_akhir }}</p>
+                                        <p>{{ $data_DetailOnloan->tgl_akhir }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +74,7 @@
                                         <p>Link Lokasi Peminjaman:</p>
                                     </td>
                                     <td>
-                                            <p>{{ $checkout->post->link_location }}</p>
+                                            <p>{{ $data_DetailOnloan->link_location }}</p>
                                         </a>
                                     </td>
                                 </tr>

@@ -6,6 +6,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\DetailOnLoanController;
+use App\Http\Controllers\datauserController;
 
 // Public Routes
 // Page Routes
@@ -47,10 +49,10 @@ Route::middleware('auth')->group(function () {
     
     Route::get('syarat-ketentuan', [PageController::class, 'syaratKetentuan']);
     Route::get('on-loan-user', [PageController::class, 'onLoanUser']);
-    Route::get('detail-on-loan-user/{checkout}', [PageController::class, 'DetailonLoanUser']);
+    Route::get('detail-on-loan-user/{checkout}', [DetailOnLoanController::class, 'DetailonLoanUser']);
     Route::get('on-loan-admin', [PageController::class, 'onLoanAdmin']);
     Route::get('detail-on-loan-admin', [PageController::class, 'DetailonLoanAdmin']);  
     Route::get('antrian', [PageController::class, 'antrian']);
     Route::get('detail-antrian', [PageController::class, 'detailAntrian']);
-    Route::get('data-user', [PageController::class, 'dataUser']);
+    Route::get('data-user', [datauserController::class, 'dataUser']);
 });
