@@ -1,6 +1,9 @@
 @extends('app')
 
 @section('content')
+    @if (session('status'))
+        <h4 class="alert alert-warning mb-2">{{ session('status') }}</h4>
+    @endif
     <div class="container tool-container">
         <div class="mb-3">
             <div class="row keterangan">
@@ -11,7 +14,6 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-
                 <div class=" card detail-control shadow mb-3">
                     <div class="card-body">
                         <table class="table table-borderless">
@@ -31,10 +33,18 @@
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
-                                        <p>Nama Alat:</p>
+                                        <p>Nama Alat</p>
                                     </td>
                                     <td>
-                                        <p>Stetoskop</p>
+                                        <p>: {{ $checkout->post->tool_name }}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ms-3 float-start">
+                                        <p>Jumlah</p>
+                                    </td>
+                                    <td>
+                                        <p>: {{ $checkout->jumlah_pinjam }} buah</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -42,7 +52,7 @@
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
-                                        <p>230522001</p>
+                                        <p>: {{ $checkout->id }}</p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -50,40 +60,32 @@
                                         <p>Nama Peminjam:</p>
                                     </td>
                                     <td>
-                                        <p>Fulan bin fulan</p>
+                                        <p>: {{ $checkout->user->name }}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
-                                        <p>Tanggal Pinjam:</p>
+                                        <p>Tanggal Pinjam</p>
                                     </td>
                                     <td>
-                                        <p>23-05-2022</p>
+                                        <p>: {{ $checkout->tgl_mulai }}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
-                                        <p>Tanggal Kembali:</p>
+                                        <p>Tanggal Kembali</p>
                                     </td>
                                     <td>
-                                        <p>25-05-2022</p>
+                                        <p>: {{ $checkout->tgl_akhir }}</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
-                                        <p>Lokasi Peminjaman:</p>
+                                        <p>Link Lokasi Peminjaman</p>
                                     </td>
                                     <td>
-                                        <p>R.S Zainal Abidin </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="ms-3 float-start">
-                                        <p>Link Lokasi Peminjaman:</p>
-                                    </td>
-                                    <td>
-                                        <a href="#" target="_blank">
-                                            <p>maps.google.com/....</p>
+                                        <a href="{{ $checkout->post->link_location }}" target="_blank">
+                                            <p>: {{ $checkout->post->link_location }}</p>
                                         </a>
                                     </td>
                                 </tr>
@@ -98,7 +100,16 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="btn btnSignIn mb-md-4 shadow" type="submit">Cetak Bukti</button>
+                    <a href="{{ url('cetak-struk/' . $checkout->id) }}" target="_blank">
+                        <button class="btn btnSignIn mb-md-4 shadow" type="submit">Cetak Bukti</button>
+                    </a>
+                </div>
+                <div class="text-center">
+                    <form action="{{ url('kembalikan/' . $checkout->id) }}" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <button class="btn btnSignIn mb-md-4 shadow" type="submit">Kembalikan</button>
+                    </form>
                 </div>
             </div>
             <div class="w-100 d-none d-md-block"></div>

@@ -31,6 +31,14 @@
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
+                                        <p>Jumlah:</p>
+                                    </td>
+                                    <td>
+                                        <p>{{ $checkout->jumlah_pinjam }} buah</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ms-3 float-start">
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
