@@ -66,21 +66,21 @@ class PageController extends Controller
         return view('page.inputUlangPassword');
     }
 
-    public function ketersediaanTool(Post $post, checkout $checkout)
+    public function ketersediaanTool(Post $post, Category $category)
     {   
-        // $post = DB::table('posts')->where('category_id', $post->id)->get();
-        $post = Post::where('category_id', $post->id)->get();
-        return view('page.ketersediaan', compact('post', 'checkout'));
+        $post = Post::where('category_id', $category->id)->where('status', 'Tersedia')->get();
+        return view('page.ketersediaan', compact('post'));
     }
 
     public function historyPinjam()
-    {
-        return view('page.history');
+    {   
+        $checkout = checkout::where('user_id', Auth::user()->id)->where('status', 'Dikembalikan')->orderBy('created_at', 'desc')->get();
+        return view('page.history', compact('checkout'));
     }
 
-    public function detailHistory()
+    public function detailHistory(checkout $checkout)
     {
-        return view('page.detail-history');
+        return view('page.detail-history', compact('checkout'));
     }
 
     public function editProfile()
@@ -102,30 +102,16 @@ class PageController extends Controller
     {
         return view('page.cetak-struk', compact('checkout'));
     }
-  
-    public function syaratKetentuan()
-    {
-        return view('page.syarat-ketentuan');
-    }
 
     public function onLoanUser()
-    {
-        return view('page.on-loan-user');
+    {   
+        $checkout = checkout::where('user_id', Auth::user()->id)->where('status', 'Sedang Dipinjam')->orderBy('tgl_akhir', 'desc')->get();
+        return view('page.on-loan-user', compact('checkout'));
     }
 
-    public function DetailonLoanUser()
-    {
-        return view('page.detail-on-loan-user');
-    }
-
-    public function onLoanAdmin()
-    {
-        return view('page.on-loan-admin');
-    }
-
-    public function DetailonLoanAdmin()
-    {
-        return view('page.detail-on-loan-admin');
+    public function DetailonLoanUser(checkout $checkout)
+    {   
+        return view('page.detail-on-loan-user', compact('checkout'));
     }
 
     public function antrian()
@@ -138,4 +124,8 @@ class PageController extends Controller
         return view('page.detail-antrian');
     }
 
+    public function kembalikanTool(checkout $checkout)
+    {
+        return view('page.pengembalian', compact('checkout'));
+    }
 }

@@ -39,6 +39,13 @@
                                 </tr>
                                 <tr>
                                     <td class="ms-3 float-start">
+                                        <p>Jumlah:</p>
+                                    </td>
+                                    <td>
+                                        <p>{{ $checkout->jumlah_pinjam }} buah</p>
+                                    </td>
+                                <tr>
+                                    <td class="ms-3 float-start">
                                         <p>No. Pinjam</p>
                                     </td>
                                     <td>
@@ -98,7 +105,7 @@
                 </div>
                 <div class="text-center">
                     {{-- <a href="{{ url('cetak-struk/' . $checkout->id) }}" target="_blank"> --}}
-                    <form action="{{ url('pinjam/' . $checkout->post_id) }}" method="POST">
+                    <form action="{{ url('pinjam/' . $checkout->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                         <button class="btn btnSignIn mb-md-4 shadow" type="submit">Cetak Bukti</button>

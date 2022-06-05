@@ -11,15 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class CheckoutController extends Controller
 {
-    public function update(Request $request, Post $post)
+    public function update(checkout $checkout, Post $post)
     {   
-        $checkout = checkout::orderBy('created_at', 'desc')->get();
-        $checkout = checkout::where('post_id', $post->id)->where('user_id', Auth::user()->id)->first();
-        $jumlah_pinjam = $checkout->jumlah_pinjam;
+        $post = Post::where('id', $checkout->post_id)->first();
+        $jumlahPinjam = $checkout->jumlah_pinjam;
         $status = '';
 
         $jumlah_alat = $post->jumlah_alat;
-        $jumlah_alat = $jumlah_alat - $jumlah_pinjam;
+        $jumlah_alat = $jumlah_alat - $jumlahPinjam;
         if($jumlah_alat > 0){
             $status = 'Tersedia';
         }else{
@@ -30,7 +29,7 @@ class CheckoutController extends Controller
             'status' => $status,
         ]);
         if($post){
-            return redirect('cetak-struk/' . $checkout->id)->with('status', 'Berhasil checkout');
+            return redirect('cetak-struk/'. $checkout->id)->with('status', 'Berhasil checkout');
         }else{
             return redirect('/')->with('status', 'Gagal checkout');
         }
@@ -63,6 +62,42 @@ class CheckoutController extends Controller
             return redirect('struk-peminjaman/'. $checkout_id)->with('status', 'Berhasil checkout');
         }else{
             return redirect('/')->with('status', 'Gagal checkout');
+        }
+    }
+
+    public function kembalikan(checkout $checkout, Post $post)
+    {   
+        $post = Post::where('id', $checkout->post_id)->first();
+        $jumlah_pinjam = $checkout->jumlah_pinjam;
+        $status = '';
+
+        $jumlah_alat = $post->jumlah_alat;
+        $jumlah_alat = $jumlah_alat + $jumlah_pinjam;
+        if($jumlah_alat > 0){
+            $status = 'Tersedia';
+        }else{
+            $status = 'Tidak Tersedia';
+        }
+        $post->update([
+            'jumlah_alat' => $jumlah_alat,
+            'status' => $status,
+        ]);
+        if($post){
+            return redirect('kembalikan-tool/'. $checkout->id);
+        }else{
+            return redirect('/')->with('status', 'Gagal kembalikan');
+        }
+    }
+
+    public function updateStatus(checkout $checkout)
+    {
+        $checkout->update([
+            'status' => 'Dikembalikan',
+        ]);
+        if($checkout){
+            return redirect('/')->with('status', 'Berhasil kembalikan');
+        }else{
+            return back()->with('status', 'Gagal kembalikan');
         }
     }
 }
